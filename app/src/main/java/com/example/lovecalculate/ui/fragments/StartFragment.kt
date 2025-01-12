@@ -25,12 +25,12 @@ class StartFragment : Fragment() {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
-        findNavController().navigate(R.id.action_startFragment_to_onBoardFragment)
+        binding.btnGetStarted.setOnClickListener {
+            findNavController().navigate(R.id.action_startFragment_to_onBoardFragment)
+        }
     }
-
     override fun onDestroy() {
         super.onDestroy()
         _binding = null
     }
-
 }
